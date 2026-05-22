@@ -21,6 +21,8 @@
             line-height: 1.6;
         }
 
+        /* HEADER */
+
         header{
             background-color: #1e3a8a;
             color: white;
@@ -32,12 +34,16 @@
             margin-bottom: 10px;
         }
 
+        /* SECTION */
+
         section{
             background-color: white;
             margin: 20px;
             padding: 20px;
             border-radius: 10px;
         }
+
+        /* BIODATA */
 
         .biodata{
             display: flex;
@@ -53,10 +59,14 @@
             border: 3px solid #da7f11;
         }
 
+        /* DESKRIPSI */
+
         .deskripsi p{
             margin-top: 10px;
             text-align: justify;
         }
+
+        /* TABEL */
 
         table{
             width: 100%;
@@ -81,6 +91,8 @@
         tr:nth-child(even){
             background-color: #f2f2f2;
         }
+
+        /* PROJECT */
 
         .card-container{
             display: flex;
@@ -120,6 +132,7 @@
             background-color: #1d4ed8;
         }
 
+        /* FOOTER */
 
         footer{
             text-align: center;
@@ -129,6 +142,7 @@
             margin-top: 20px;
         }
 
+        /* RESPONSIVE */
 
         @media(max-width: 768px){
 
@@ -151,6 +165,8 @@
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
         <h1>Website Report Siswa</h1>
 
@@ -159,12 +175,15 @@
         <p>Kelas XI SMA</p>
     </header>
 
+    <!-- BIODATA -->
+
     <section>
 
         <h2>Biodata Siswa</h2>
 
         <div class="biodata">
 
+            <!-- GANTI FOTO -->
             <img src="WhatsApp Image 2026-05-19 at 16.18.35.jpeg" alt="Foto Profil">
 
             <div>
@@ -185,6 +204,7 @@
 
     </section>
 
+    <!-- DESKRIPSI -->
 
     <section class="deskripsi">
 
@@ -204,6 +224,7 @@
 
     </section>
 
+    <!-- TABEL NILAI -->
 
     <section>
 
@@ -251,11 +272,15 @@
 
     </section>
 
+    <!-- PROJECT -->
+
     <section>
 
         <h2>Project Website</h2>
 
         <div class="card-container">
+
+            <!-- PROJECT 1 -->
 
             <div class="card">
 
@@ -271,6 +296,7 @@
 
             </div>
 
+            <!-- PROJECT 2 -->
 
             <div class="card">
 
@@ -286,6 +312,7 @@
 
             </div>
 
+            <!-- PROJECT 3 -->
 
             <div class="card">
 
@@ -305,6 +332,8 @@
 
     </section>
 
+    <!-- FOOTER -->
+
     <footer>
 
         <p>
@@ -313,6 +342,7 @@
 
     </footer>
 
+    <!-- JAVASCRIPT -->
 
     <script>
 
