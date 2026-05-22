@@ -129,7 +129,6 @@
             margin-top: 20px;
         }
 
-        /* RESPONSIVE */
 
         @media(max-width: 768px){
 
@@ -166,7 +165,6 @@
 
         <div class="biodata">
 
-            <!-- GANTI FOTO -->
             <img src="WhatsApp Image 2026-05-19 at 16.18.35.jpeg" alt="Foto Profil">
 
             <div>
