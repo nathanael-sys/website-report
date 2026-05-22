@@ -7,7 +7,6 @@
 
     <title>Website Report Siswa</title>
 
-    <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -30,7 +29,6 @@
             line-height: 1.7;
         }
 
-        /* CONTAINER */
 
         .container{
             max-width: 1200px;
@@ -38,7 +36,6 @@
             padding: 20px;
         }
 
-        /* HEADER */
 
         header{
             background: linear-gradient(135deg, #1e3a8a, #3b82f6);
@@ -60,7 +57,6 @@
             opacity: 0.95;
         }
 
-        /* SECTION */
 
         section{
             background-color: white;
@@ -81,7 +77,6 @@
             font-size: 28px;
         }
 
-        /* BIODATA */
 
         .biodata{
             display: flex;
@@ -107,14 +102,12 @@
             color: #1e3a8a;
         }
 
-        /* DESKRIPSI */
 
         .deskripsi p{
             text-align: justify;
             font-size: 17px;
         }
 
-        /* TABEL */
 
         table{
             width: 100%;
@@ -142,8 +135,6 @@
         tr:hover{
             background-color: #dbeafe;
         }
-
-        /* PROJECT */
 
         .card-container{
             display: flex;
@@ -192,7 +183,6 @@
             opacity: 0.95;
         }
 
-        /* FOOTER */
 
         footer{
             margin-top: 40px;
@@ -202,7 +192,6 @@
             padding: 25px;
         }
 
-        /* SCROLL BUTTON */
 
         .top-btn{
             position: fixed;
@@ -219,7 +208,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        /* RESPONSIVE */
 
         @media(max-width: 768px){
 
@@ -252,7 +240,6 @@
 
 <body>
 
-    <!-- HEADER -->
 
     <header>
 
@@ -265,8 +252,6 @@
     </header>
 
     <div class="container">
-
-        <!-- BIODATA -->
 
         <section>
 
@@ -295,8 +280,6 @@
 
         </section>
 
-        <!-- DESKRIPSI -->
-
         <section class="deskripsi">
 
             <h2>Deskripsi Singkat</h2>
@@ -315,9 +298,7 @@
             </p>
 
         </section>
-
-        <!-- TABEL NILAI -->
-
+        
         <section>
 
             <h2>Tabel Nilai Semester</h2>
@@ -363,8 +344,6 @@
             </table>
 
         </section>
-
-        <!-- PROJECT -->
 
         <section>
 
@@ -420,8 +399,6 @@
 
     </div>
 
-    <!-- FOOTER -->
-
     <footer>
 
         <p>
@@ -429,14 +406,11 @@
         </p>
 
     </footer>
-
-    <!-- BUTTON TOP -->
+    
 
     <button class="top-btn" id="topBtn" onclick="scrollToTop()">
         ↑
     </button>
-
-    <!-- JAVASCRIPT -->
 
     <script>
 
@@ -471,7 +445,6 @@
 
         }
 
-        // BUTTON SCROLL TOP
 
         let topBtn = document.getElementById("topBtn");
 
