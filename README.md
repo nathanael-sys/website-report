@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Website Report Siswa</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
 
@@ -12,35 +20,65 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body{
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fb;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
+        }
+
+        /* CONTAINER */
+
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
         }
 
         /* HEADER */
 
         header{
-            background-color: #1e3a8a;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
             color: white;
+            padding: 70px 20px;
             text-align: center;
-            padding: 25px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         header h1{
+            font-size: 45px;
             margin-bottom: 10px;
+        }
+
+        header p{
+            font-size: 18px;
+            opacity: 0.95;
         }
 
         /* SECTION */
 
         section{
             background-color: white;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
+            margin-top: 30px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        section:hover{
+            transform: translateY(-3px);
+        }
+
+        section h2{
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            font-size: 28px;
         }
 
         /* BIODATA */
@@ -48,22 +86,32 @@
         .biodata{
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 40px;
         }
 
         .biodata img{
-            width: 170px;
-            height: 170px;
+            width: 220px;
+            height: 220px;
             object-fit: cover;
-            border-radius: 10px;
-            border: 3px solid #da7f11;
+            border-radius: 20px;
+            border: 5px solid #3b82f6;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .bio-text p{
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .bio-text strong{
+            color: #1e3a8a;
         }
 
         /* DESKRIPSI */
 
         .deskripsi p{
-            margin-top: 10px;
             text-align: justify;
+            font-size: 17px;
         }
 
         /* TABEL */
@@ -71,96 +119,135 @@
         table{
             width: 100%;
             border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 15px;
             margin-top: 15px;
         }
 
-        table, th, td{
-            border: 1px solid #999;
-        }
-
         th{
-            background-color: #d43313;
+            background-color: #1e3a8a;
             color: white;
         }
 
         th, td{
-            padding: 10px;
+            padding: 15px;
             text-align: center;
+            border: 1px solid #ddd;
         }
 
         tr:nth-child(even){
-            background-color: #f2f2f2;
+            background-color: #f1f5f9;
+        }
+
+        tr:hover{
+            background-color: #dbeafe;
         }
 
         /* PROJECT */
 
         .card-container{
             display: flex;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
-            margin-top: 15px;
             justify-content: center;
         }
 
         .card{
-            background-color: #e5e7eb;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            width: 320px;
+            padding: 25px;
+            border-radius: 20px;
             transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
         .card:hover{
-            transform: scale(1.03);
+            transform: translateY(-8px) scale(1.02);
         }
 
         .card h3{
-            margin-bottom: 10px;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .card p{
+            margin-bottom: 15px;
         }
 
         button{
-            margin-top: 10px;
-            padding: 10px 15px;
-            border: none;
-            background-color: #6d7ea2;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
-            border-radius: 5px;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
             cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s;
         }
 
         button:hover{
-            background-color: #1d4ed8;
+            transform: scale(1.05);
+            opacity: 0.95;
         }
 
         /* FOOTER */
 
         footer{
-            text-align: center;
-            padding: 20px;
-            background-color: #616d8f;
+            margin-top: 40px;
+            background: #1e293b;
             color: white;
-            margin-top: 20px;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* SCROLL BUTTON */
+
+        .top-btn{
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 15px 18px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         /* RESPONSIVE */
 
         @media(max-width: 768px){
 
+            header h1{
+                font-size: 32px;
+            }
+
             .biodata{
                 flex-direction: column;
                 text-align: center;
             }
 
-            .card-container{
-                flex-direction: column;
+            .biodata img{
+                width: 180px;
+                height: 180px;
             }
 
             .card{
                 width: 100%;
             }
+
+            section{
+                padding: 20px;
+            }
         }
 
     </style>
+
 </head>
 
 <body>
@@ -168,169 +255,170 @@
     <!-- HEADER -->
 
     <header>
+
         <h1>Website Report Siswa</h1>
 
         <p>Mata Pelajaran Teknologi Informasi dan Komunikasi</p>
 
-        <p>Kelas XI SMA</p>
+        <p>Kelas XI SMA Kanisius Jakarta</p>
+
     </header>
 
-    <!-- BIODATA -->
+    <div class="container">
 
-    <section>
+        <!-- BIODATA -->
 
-        <h2>Biodata Siswa</h2>
+        <section>
 
-        <div class="biodata">
+            <h2>Biodata Siswa</h2>
 
-            <!-- GANTI FOTO -->
-            <img src="WhatsApp Image 2026-05-19 at 16.18.35.jpeg" alt="Foto Profil">
+            <div class="biodata">
 
-            <div>
+                <!-- GANTI FOTO -->
+                <img src="foto.jpg" alt="Foto Profil">
 
-                <p><strong>Nama Lengkap:</strong> Aloysius Nathanael Aditya Setyawan</p>
+                <div class="bio-text">
 
-                <p><strong>Kelas:</strong> XI-S8</p>
+                    <p><strong>Nama Lengkap:</strong> Aloysius Nathanael Aditya Setyawan</p>
 
-                <p><strong>Sekolah:</strong> SMA Kanisius Jakarta</p>
+                    <p><strong>Kelas:</strong> XI-S8</p>
 
-                <p><strong>Hobi:</strong> Bermain game dan mendengarkan musik</p>
+                    <p><strong>Sekolah:</strong> SMA Kanisius Jakarta</p>
 
-                <p><strong>Cita-cita:</strong>Business Man</p>
+                    <p><strong>Hobi:</strong> Bermain game dan mendengarkan musik</p>
 
-            </div>
+                    <p><strong>Cita-cita:</strong> Business Man</p>
 
-        </div>
-
-    </section>
-
-    <!-- DESKRIPSI -->
-
-    <section class="deskripsi">
-
-        <h2>Deskripsi Singkat</h2>
-
-        <p>
-            Saya adalah siswa kelas XI yang sebenarnya tidak begitu memiliki minat 
-            terhadap bidang TIK/Informatika. Pada saat pelajaran TIK/Informatika,
-            tentu saja saya mengalami kesulitan untuk memahami materi atau praktik
-            yang diberikan, sehingga seringkali meminta bantuan kepada teman/guru. Namun
-            seiring berjalannya waktu, pembelajaran TIK memberikan berbagai makna dan
-            pembelajaran penting terkait pembuatan website, hal dasar HTML, CSS, yang
-            banyak digunakan dalam pembuatan website-website brand ternama. Saya berharap
-            pembelajaran TIK ini dapat memberikan pengalaman dan penambahan ilmu yang berguna
-            untuk masa depan saya.
-        </p>
-
-    </section>
-
-    <!-- TABEL NILAI -->
-
-    <section>
-
-        <h2>Tabel Nilai Semester</h2>
-
-        <table>
-
-            <tr>
-                <th>No</th>
-                <th>Materi</th>
-                <th>Nilai</th>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Akuntansi</td>
-                <td>90</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Agama</td>
-                <td>88</td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>PJOK</td>
-                <td>85</td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>Ekonomi</td>
-                <td>92</td>
-            </tr>
-
-            <tr>
-                <td>5</td>
-                <td>Matematika</td>
-                <td>89</td>
-            </tr>
-
-        </table>
-
-    </section>
-
-    <!-- PROJECT -->
-
-    <section>
-
-        <h2>Project Website</h2>
-
-        <div class="card-container">
-
-            <!-- PROJECT 1 -->
-
-            <div class="card">
-
-                <h3>Project 1</h3>
-
-                <p>
-                    Website sederhana tentang profil diri menggunakan HTML.
-                </p>
-
-                <button onclick="project1()">
-                    Lihat Project
-                </button>
+                </div>
 
             </div>
 
-            <!-- PROJECT 2 -->
+        </section>
 
-            <div class="card">
+        <!-- DESKRIPSI -->
 
-                <h3>Project 2</h3>
+        <section class="deskripsi">
 
-                <p>
-                    Website galeri foto sederhana menggunakan CSS.
-                </p>
+            <h2>Deskripsi Singkat</h2>
 
-                <button onclick="project2()">
-                    Lihat Project
-                </button>
+            <p>
+                Saya adalah siswa kelas XI yang sebenarnya tidak begitu memiliki minat
+                terhadap bidang TIK/Informatika. Pada saat pelajaran TIK/Informatika,
+                saya sering mengalami kesulitan dalam memahami materi maupun praktik
+                yang diberikan. Namun, seiring berjalannya waktu, saya mulai memahami
+                bahwa pembelajaran TIK memiliki manfaat yang besar dalam kehidupan modern,
+                terutama dalam bidang teknologi dan pengembangan website. Melalui pembelajaran
+                HTML, CSS, dan JavaScript, saya memperoleh pengalaman baru tentang bagaimana
+                sebuah website dibuat dan dikembangkan. Saya berharap ilmu yang saya pelajari
+                dapat bermanfaat bagi masa depan saya serta membantu saya untuk terus berkembang
+                di era digital saat ini.
+            </p>
+
+        </section>
+
+        <!-- TABEL NILAI -->
+
+        <section>
+
+            <h2>Tabel Nilai Semester</h2>
+
+            <table>
+
+                <tr>
+                    <th>No</th>
+                    <th>Materi</th>
+                    <th>Nilai</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Akuntansi</td>
+                    <td>90</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Agama</td>
+                    <td>88</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>PJOK</td>
+                    <td>85</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Ekonomi</td>
+                    <td>92</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Matematika</td>
+                    <td>89</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- PROJECT -->
+
+        <section>
+
+            <h2>Project Website</h2>
+
+            <div class="card-container">
+
+                <div class="card">
+
+                    <h3>Project 1</h3>
+
+                    <p>
+                        Website sederhana mengenai profil diri menggunakan HTML dasar.
+                    </p>
+
+                    <button onclick="project1()">
+                        Lihat Project
+                    </button>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Project 2</h3>
+
+                    <p>
+                        Website galeri sederhana menggunakan desain CSS modern.
+                    </p>
+
+                    <button onclick="project2()">
+                        Lihat Project
+                    </button>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Project 3</h3>
+
+                    <p>
+                        Website interaktif menggunakan JavaScript sederhana.
+                    </p>
+
+                    <button onclick="project3()">
+                        Lihat Project
+                    </button>
+
+                </div>
 
             </div>
 
-            <!-- PROJECT 3 -->
+        </section>
 
-            <div class="card">
-
-                <h3>Project 3</h3>
-
-                <p>
-                    Website interaktif sederhana menggunakan JavaScript.
-                </p>
-
-                <button onclick="project3()">
-                    Lihat Project
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
+    </div>
 
     <!-- FOOTER -->
 
@@ -341,6 +429,12 @@
         </p>
 
     </footer>
+
+    <!-- BUTTON TOP -->
+
+    <button class="top-btn" id="topBtn" onclick="scrollToTop()">
+        ↑
+    </button>
 
     <!-- JAVASCRIPT -->
 
@@ -354,7 +448,7 @@
 
             alert(
                 "Project 1\n\n" +
-                "Website sederhana tentang profil diri menggunakan HTML."
+                "Website sederhana mengenai profil diri menggunakan HTML dasar."
             );
 
         }
@@ -363,7 +457,7 @@
 
             alert(
                 "Project 2\n\n" +
-                "Website galeri foto sederhana menggunakan CSS."
+                "Website galeri sederhana menggunakan desain CSS modern."
             );
 
         }
@@ -372,12 +466,40 @@
 
             alert(
                 "Project 3\n\n" +
-                "Website interaktif sederhana menggunakan JavaScript."
+                "Website interaktif menggunakan JavaScript sederhana."
             );
+
+        }
+
+        // BUTTON SCROLL TOP
+
+        let topBtn = document.getElementById("topBtn");
+
+        window.onscroll = function(){
+
+            if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+
+                topBtn.style.display = "block";
+
+            } else {
+
+                topBtn.style.display = "none";
+
+            }
+
+        };
+
+        function scrollToTop(){
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
         }
 
     </script>
 
 </body>
+
 </html>
